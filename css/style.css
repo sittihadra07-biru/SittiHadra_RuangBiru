@@ -1,0 +1,64 @@
+/* ===== Variabel warna (ubah di sini untuk mengganti tema) ===== */
+:root{
+  /* Palet utama */
+  --biru:#60B5FF;
+  --biru-muda:#AFDDFF;
+  --krem:#FFECDB;
+  --oranye:#FF9149;
+
+  /* Warna pendukung (lebih gelap, agar teks terbaca) */
+  --biru-tua:#1a5a96;
+  --biru-gelap:#0f3a63;
+  --ink:#0f1f3d;
+
+  /* Gradasi */
+  --grad-hero:linear-gradient(135deg,#60B5FF 0%,#AFDDFF 40%,#FFECDB 75%,#FF9149 100%);
+  --grad-body:linear-gradient(180deg,#fff8f1 0%,#f2f9ff 60%,#e3f2ff 100%);
+  --grad-navbar:linear-gradient(90deg,#ffffff,#FFECDB);
+  --grad-footer:linear-gradient(135deg,#0f3a63,#1a5a96);
+}
+
+/* ===== Dasar ===== */
+body{
+  font-family:'Source Sans 3',sans-serif;
+  background:var(--grad-body) fixed;
+  color:var(--ink);
+  line-height:1.7;
+}
+h1,h2,h3,h4,h5,.brand{font-family:'Lora',serif;line-height:1.25}
+a{color:var(--biru-tua)}
+a:hover{color:var(--biru-gelap)}
+
+/* ===== Navbar ===== */
+.navbar{background:var(--grad-navbar)!important}
+.brand{font-weight:700;color:var(--biru-tua)!important;font-size:1.5rem}
+.navbar .nav-link.active{color:var(--biru-tua);font-weight:600;border-bottom:3px solid var(--oranye)}
+
+/* ===== Hero =====
+   Latar terang, jadi teks memakai warna gelap */
+.hero{background:var(--grad-hero);color:var(--ink)}
+.hero .btn-outline-light{border-color:var(--biru-gelap);color:var(--biru-gelap);font-weight:600}
+.hero .btn-outline-light:hover{background:var(--biru-gelap);color:#fff}
+
+/* ===== Tombol ===== */
+.btn-accent{background:var(--oranye);border-color:var(--oranye);color:var(--ink);font-weight:600}
+.btn-accent:hover{background:#e8792f;border-color:#e8792f;color:var(--ink)}
+.btn-outline-brand{border-color:var(--biru-tua);color:var(--biru-tua)}
+.btn-outline-brand:hover{background:var(--biru-tua);color:#fff}
+
+/* ===== Kartu artikel ===== */
+.badge-cat{background:var(--biru-muda);color:var(--biru-gelap);font-weight:600}
+.article-card{border:1px solid var(--biru-muda);background:#fff;transition:transform .2s,box-shadow .2s}
+.article-card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(96,181,255,.35)}
+.article-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
+
+/* ===== Komponen lain ===== */
+.pagination .active .page-link{background:var(--biru-tua);border-color:var(--biru-tua)}
+.alert-info{background:var(--krem);border-color:var(--oranye);color:#5a2d0c}
+
+/* ===== Footer ===== */
+.footer{background:var(--grad-footer);color:var(--krem);border-top:4px solid var(--oranye)}
+.footer a{color:#fff}
+
+/* ===== Aksesibilitas ===== */
+:focus-visible{outline:3px solid var(--biru-tua);outline-offset:2px}
